@@ -14,7 +14,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous">
 
-    <!-- Font Awesome (icônes réseaux sociaux) -->
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -34,7 +34,42 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Overlay pour l'effet page flip -->
+    <div id="page-flip-overlay" class="page-flip d-none"></div>
+
+    <!-- Script pour l'effet page flip -->
+    <script>
+      function initPageFlip() {
+        const triggers = document.querySelectorAll(".page-flip-trigger");
+        const overlay  = document.getElementById("page-flip-overlay");
+
+        if (!overlay || triggers.length === 0) return;
+
+        triggers.forEach(trigger => {
+          trigger.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetUrl = trigger.getAttribute("href");
+
+            overlay.classList.remove("d-none");
+            overlay.classList.add("animate");
+
+            setTimeout(() => {
+              window.location.href = targetUrl;
+            }, 900);
+          });
+        });
+      }
+
+      // Rails 7 + Turbo
+      document.addEventListener("turbo:load", initPageFlip);
+
+      // Fallback
+      document.addEventListener("DOMContentLoaded", initPageFlip);
+    </script>
+
   </body>
 </html>
 
