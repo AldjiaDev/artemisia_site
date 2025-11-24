@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "exhibitions/index"
   get "about/index"
   # Page d'accueil
   root "pages#home"
@@ -17,4 +18,5 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   get "about", to: "about#index"
+  get "exhibitions", to: "exhibitions#index"
 end

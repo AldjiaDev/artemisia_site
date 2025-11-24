@@ -416,3 +416,137 @@
 .about-right-column .mag-right-block-link:hover .mag-right-cta {
   color: #ffffff !important;
 }
+
+/* EXHIBITIONS PAGE — DOUBLE PAGE MAGAZINE */
+
+.exhibitions-double-page {
+  position: relative; /* pour la gouttière si besoin plus tard */
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* PAGE GAUCHE (TEXTE) */
+.exhibitions-left {
+  flex: 1;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+}
+
+.exhibitions-left-inner {
+  max-width: 650px;
+}
+
+.exhibitions-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+
+.exhibitions-main-title {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.exhibitions-chapo {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  max-width: 32rem;
+}
+
+.exhibitions-body p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.98rem;
+}
+
+.exhibitions-section-title {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.75rem;
+}
+
+/* PAGE DROITE (IMAGE) */
+.exhibitions-right {
+  flex: 1;
+  overflow: hidden;
+}
+
+.exhibitions-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* RESPONSIVE — MOBILE */
+@media (max-width: 992px) {
+  .exhibitions-double-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .exhibitions-right {
+    height: 55vh;
+  }
+
+  .exhibitions-image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .exhibitions-left {
+    padding: 2rem;
+  }
+}
+
+.exhibitions-double-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #f0ece4;
+  transform: translateX(-1px);
+  pointer-events: none;
+}
+
+@media (max-width: 992px) {
+  .exhibitions-double-page::before {
+    display: none;
+  }
+}
+
+/* Colonne de droite sur Exhibitions */
+.exhibitions-right-column .mag-right-block {
+  background: rgba(0, 0, 0, 0.55); /* fond sombre translucide */
+  padding: 1rem;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+/* Texte blanc partout */
+.exhibitions-right-column .mag-right-heading,
+.exhibitions-right-column .mag-right-text,
+.exhibitions-right-column .mag-right-cta {
+  color: #fff !important;
+}
+
+/* Icônes flèches / liens blancs */
+.exhibitions-right-column .mag-right-block-link {
+  color: #fff !important;
+}
+
+/* Hover : petit zoom */
+.exhibitions-right-column .mag-right-block:hover {
+  transform: scale(1.02);
+}
