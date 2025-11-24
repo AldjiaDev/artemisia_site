@@ -550,3 +550,153 @@
 .exhibitions-right-column .mag-right-block:hover {
   transform: scale(1.02);
 }
+
+/* === WORKS DOUBLE PAGE === */
+
+.works-double-page {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Left column */
+.works-left {
+  flex: 1;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+}
+
+.works-left-inner {
+  max-width: 650px;
+}
+
+.works-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+
+.works-main-title {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.works-chapo {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+}
+
+.works-body p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.98rem;
+}
+
+.works-section-title {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.75rem;
+}
+
+/* Right image column */
+.works-right {
+  flex: 1;
+  overflow: hidden;
+}
+
+.works-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === WORKS GALLERY (Catalogue section) === */
+
+.works-gallery {
+  padding: 3rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  background: #fff;
+}
+
+.work-card-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.6rem;
+}
+
+.work-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.work-card-meta {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.work-card-text {
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .works-double-page {
+    flex-direction: column;
+    height: auto;
+  }
+  .works-right {
+    height: 50vh;
+  }
+  .works-gallery {
+    padding: 2rem;
+  }
+}
+/* Colonne magazine sur la page WORKS */
+.works-right-column {
+  position: fixed;
+  right: 2.7rem;
+  top: 30%;   /* <<< C'EST CE QUI MANQUAIT */
+  transform: translateY(-30%); /* pour un centrage naturel */
+  max-width: 18rem;
+  z-index: 30;
+}
+
+
+/* Fond sombre + texte blanc comme About / Exhibitions */
+.works-right-column .mag-right-block {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 1rem;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.works-right-column .mag-right-heading,
+.works-right-column .mag-right-text,
+.works-right-column .mag-right-cta {
+  color: #fff !important;
+}
+
+/* Hover léger */
+.works-right-column .mag-right-block:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive : la colonne passe en flux normal */
+@media (max-width: 992px) {
+  .works-right-column {
+    position: static;
+    transform: none;
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+}

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "works/index"
   get "exhibitions/index"
   get "about/index"
   # Page d'accueil
@@ -19,4 +20,5 @@ Rails.application.routes.draw do
 
   get "about", to: "about#index"
   get "exhibitions", to: "exhibitions#index"
+  get "works", to: "works#index"
 end
