@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "contact/index"
   get "works/index"
   get "exhibitions/index"
   get "about/index"
@@ -21,4 +22,5 @@ Rails.application.routes.draw do
   get "about", to: "about#index"
   get "exhibitions", to: "exhibitions#index"
   get "works", to: "works#index"
+  get "contact", to: "contact#index"
 end

@@ -700,3 +700,118 @@
     max-width: 100%;
   }
 }
+
+/* CONTACT PAGE — DOUBLE PAGE */
+
+.contact-double-page {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Colonne gauche */
+.contact-left {
+  flex: 1;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+}
+
+.contact-left-inner {
+  max-width: 650px;
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+
+.contact-main-title {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.contact-chapo {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+}
+
+.contact-body p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.98rem;
+}
+
+/* Colonne droite : image plein cadre */
+.contact-right {
+  flex: 1;
+  overflow: hidden;
+}
+
+.contact-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Colonne de navigation sur Contact */
+.contact-right-column {
+  position: fixed;
+  right: 2.7rem;
+  top: 30%;
+  transform: translateY(-30%);
+  max-width: 18rem;
+  z-index: 30;
+}
+
+.contact-right-column .mag-right-block {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 1rem;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.contact-right-column .mag-right-heading,
+.contact-right-column .mag-right-text,
+.contact-right-column .mag-right-cta {
+  color: #fff !important;
+}
+
+.contact-right-column .mag-right-block:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .contact-double-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contact-left {
+    padding: 2rem;
+  }
+
+  .contact-right {
+    height: 50vh;
+  }
+
+  .contact-image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .contact-right-column {
+    position: static;
+    transform: none;
+    margin-top: 2rem;
+    max-width: 100%;
+  }
+}
