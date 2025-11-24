@@ -401,3 +401,18 @@
     font-size: 1.2rem;
   }
 }
+
+/* Texte blanc pour la colonne magazine sur la page About */
+.about-right-column,
+.about-right-column .mag-right-heading,
+.about-right-column .mag-right-text,
+.about-right-column .mag-right-cta {
+  color: #fff !important;
+}
+
+/* Pour les hover éventuels */
+.about-right-column .mag-right-block-link:hover .mag-right-heading,
+.about-right-column .mag-right-block-link:hover .mag-right-text,
+.about-right-column .mag-right-block-link:hover .mag-right-cta {
+  color: #ffffff !important;
+}
