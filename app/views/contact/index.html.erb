@@ -1,6 +1,6 @@
 <div class="contact-double-page">
 
-  <!-- COLONNE GAUCHE : TEXTE EDITORIAL -->
+  <!-- COLONNE GAUCHE : TEXTE + FORMULAIRE -->
   <div class="contact-left">
     <div class="contact-left-inner">
 
@@ -11,52 +11,85 @@
 
       <!-- Titre principal -->
       <h1 class="contact-main-title">
-        Contact &<br>
-        collaborations
+        Get in touch.<br>
+        Collaborate. Connect.
       </h1>
 
       <!-- Chapo -->
       <p class="contact-chapo">
-        This page illustrates how a dedicated contact space can connect an artist
-        with curators, galleries, the press and audiences, while remaining coherent
-        with a magazine-inspired layout.
+        This page illustrates how a dedicated contact space can help an artist
+        communicate with curators, galleries, the press and audiences — while
+        remaining coherent with a magazine-inspired layout.
       </p>
 
-      <!-- Texte principal -->
-      <div class="contact-body">
+      <!-- Bloc éditorial -->
+      <div class="contact-section">
+
+        <h2 class="contact-section-title">General inquiries</h2>
         <p>
-          In a real artist website, this section would centralise all practical
-          information: who to contact for exhibitions, which gallery represents
-          the artist, how to request images or organise a talk, and how to stay
-          informed about upcoming projects.
+          For questions about the artist’s work, upcoming exhibitions,
+          collaborations or speaking engagements.
         </p>
 
+        <h2 class="contact-section-title mt-4">Press & media</h2>
         <p>
-          Here, it serves as an example of how a contact page can stay clear and
-          functional without losing its visual identity. A visitor should
-          immediately understand how to reach the right person, whether they are
-          a curator, journalist, collector or simply an admirer of the work.
+          Journalists and editors may request high-resolution images, interview
+          opportunities, or additional documentation.
         </p>
 
+        <h2 class="contact-section-title mt-4">Exhibitions & galleries</h2>
         <p>
-          The actual form and contact details can be fully customised for each
-          artist or cultural project, while keeping this editorial structure.
+          Curators and institutions wishing to organise a show or borrow a work
+          can get in touch using the form below.
         </p>
+
+        <!-- Citation / Pull quote -->
+        <div class="contact-pullquote">
+          <p class="contact-pullquote-text">
+            “Art connects people — each message is the beginning of a new story.”
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Formulaire -->
+      <div class="contact-form-wrapper">
+        <h2 class="contact-section-title">Send a message</h2>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Your name">
+          </div>
+
+          <div class="form-group mt-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="your@email.com">
+          </div>
+
+          <div class="form-group mt-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="4" placeholder="Write your message..."></textarea>
+          </div>
+
+          <button type="button" class="contact-submit-btn mt-4">
+            Send message
+          </button>
+        </form>
       </div>
 
     </div>
   </div>
 
-  <!-- COLONNE DROITE : IMAGE (COMME ABOUT / EXHIBITIONS) -->
+  <!-- COLONNE DROITE : IMAGE PLEIN CADRE -->
   <div class="contact-right">
     <%= image_tag "artemisia-cover.jpg", class: "contact-image" %>
   </div>
 
 </div>
 
-<!-- COLONNE NAVIGATION MAGAZINE À DROITE -->
-<aside class="mag-right-column contact-right-column">
-
+<!-- ASIDE MAGAZINE — MÊME QUE HOME -->
+<aside class="mag-right-column">
   <!-- HOME -->
   <a href="/" class="mag-right-block-link">
     <div class="mag-right-block">
@@ -116,6 +149,4 @@
       </p>
     </div>
   </a>
-
 </aside>
-
